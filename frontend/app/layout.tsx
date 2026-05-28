@@ -39,6 +39,8 @@ export default function RootLayout({
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Starfield from "@/components/layout/Starfield";
+import Navbar from "@/components/layout/Navbar";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -75,7 +77,11 @@ export default function RootLayout({
           font-sans antialiased
         `}
       >
-        {children}
+        <Starfield />
+        <Navbar />
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );
