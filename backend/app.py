@@ -111,7 +111,7 @@ def build_features():
     return latest, df.index[-1]
 
 
-# ── routes ────────────────────────────────────────────────────────────────
+# routes
 @app.route("/")
 def index():
     return jsonify({"status": "ok", "message": "Portfolio backend running."})
